@@ -1,5 +1,6 @@
 import React from 'react';
 import { Camera, Film, MapPin, Award } from 'lucide-react';
+import { aboutPhotographer } from '../assets/images';
 
 export const AboutSection: React.FC = () => {
   const stats = [
@@ -26,7 +27,7 @@ export const AboutSection: React.FC = () => {
               {/* Main Image Container */}
               <div className="relative rounded-sm overflow-hidden bg-zinc-900 border border-white/10 shadow-2xl group">
                 <img
-                  src="/src/assets/images/about_photographer_1790271696194.jpg"
+                  src={aboutPhotographer}
                   alt="STUNTS Photography & Videography Studio Behind the Lens"
                   referrerPolicy="no-referrer"
                   className="w-full h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, Calendar, Sparkles, ChevronRight } from 'lucide-react';
+import { heroMatricCouple } from '../assets/images';
 
 interface HeroProps {
   onBookClick: () => void;
@@ -107,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick, onWorkClick }) => {
               {/* Main Circular Photography Frame */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-red-600/90 shadow-2xl shadow-red-950/80 bg-zinc-950 group">
                 <img
-                  src="/src/assets/images/hero_matric_couple_1790271673501.jpg"
+                  src={heroMatricCouple}
                   alt="STUNTS Matric Dance Couple Photography Pretoria"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-700"

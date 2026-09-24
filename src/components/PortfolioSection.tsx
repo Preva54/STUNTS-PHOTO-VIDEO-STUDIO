@@ -92,6 +92,9 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ portfolio })
                     src={item.image}
                     alt={item.title}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/images/hero_matric_couple.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 brightness-95 group-hover:brightness-105"
                   />
 

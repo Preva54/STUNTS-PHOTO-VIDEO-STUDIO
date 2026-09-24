@@ -13,16 +13,31 @@ import {
   SiteSettings,
   Booking
 } from './stuntsData';
+import {
+  heroMatricCouple,
+  matricNightFeature,
+  aboutPhotographer,
+  portfolioWeddingCouple,
+} from '../assets/images';
 
 const STORAGE_KEYS = {
-  PACKAGES: 'stunts_packages_v1',
-  SERVICES: 'stunts_services_v1',
-  PORTFOLIO: 'stunts_portfolio_v1',
-  CONTACT: 'stunts_contact_v1',
-  SETTINGS: 'stunts_settings_v1',
-  BOOKINGS: 'stunts_bookings_v1',
-  ADMIN_AUTH: 'stunts_admin_auth_v1'
+  PACKAGES: 'stunts_packages_v2',
+  SERVICES: 'stunts_services_v2',
+  PORTFOLIO: 'stunts_portfolio_v2',
+  CONTACT: 'stunts_contact_v2',
+  SETTINGS: 'stunts_settings_v2',
+  BOOKINGS: 'stunts_bookings_v2',
+  ADMIN_AUTH: 'stunts_admin_auth_v2'
 };
+
+function resolveImagePath(path: string): string {
+  if (!path) return heroMatricCouple;
+  if (path.includes('hero_matric_couple')) return heroMatricCouple;
+  if (path.includes('matric_night_feature')) return matricNightFeature;
+  if (path.includes('about_photographer')) return aboutPhotographer;
+  if (path.includes('portfolio_wedding_couple')) return portfolioWeddingCouple;
+  return path;
+}
 
 function getStorage<T>(key: string, fallback: T): T {
   try {
@@ -47,12 +62,14 @@ export function useStuntsStore() {
   const [packages, setPackagesState] = useState<PackageItem[]>(() =>
     getStorage(STORAGE_KEYS.PACKAGES, INITIAL_PACKAGES)
   );
-  const [services, setServicesState] = useState<ServiceItem[]>(() =>
-    getStorage(STORAGE_KEYS.SERVICES, INITIAL_SERVICES)
-  );
-  const [portfolio, setPortfolioState] = useState<PortfolioItem[]>(() =>
-    getStorage(STORAGE_KEYS.PORTFOLIO, INITIAL_PORTFOLIO)
-  );
+  const [services, setServicesState] = useState<ServiceItem[]>(() => {
+    const loaded = getStorage(STORAGE_KEYS.SERVICES, INITIAL_SERVICES);
+    return loaded.map(s => ({ ...s, image: resolveImagePath(s.image) }));
+  });
+  const [portfolio, setPortfolioState] = useState<PortfolioItem[]>(() => {
+    const loaded = getStorage(STORAGE_KEYS.PORTFOLIO, INITIAL_PORTFOLIO);
+    return loaded.map(p => ({ ...p, image: resolveImagePath(p.image) }));
+  });
   const [contact, setContactState] = useState<ContactInfo>(() =>
     getStorage(STORAGE_KEYS.CONTACT, INITIAL_CONTACT)
   );

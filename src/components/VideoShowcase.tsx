@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, X, Film, Sparkles, CheckCircle2 } from 'lucide-react';
+import { matricNightFeature } from '../assets/images';
 
 interface VideoShowcaseProps {
   videoUrl?: string;
@@ -61,7 +62,7 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({
         <div className="relative rounded-sm overflow-hidden bg-black border border-white/10 shadow-2xl group max-w-5xl mx-auto mb-16">
           <div className="relative aspect-video w-full overflow-hidden bg-zinc-900">
             <img
-              src="/src/assets/images/matric_night_feature_1790271685576.jpg"
+              src={matricNightFeature}
               alt="STUNTS Cinematic Film Showcase"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-75 group-hover:brightness-90"

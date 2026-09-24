@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import { matricNightFeature } from '../assets/images';
 
 interface FeaturedMatricSectionProps {
   onViewPackages: () => void;
@@ -13,7 +14,7 @@ export const FeaturedMatricSection: React.FC<FeaturedMatricSectionProps> = ({
       {/* Cinematic Ken Burns Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/matric_night_feature_1790271685576.jpg"
+          src={matricNightFeature}
           alt="Matric Night Gala Pretoria"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center animate-ken-burns filter brightness-45 contrast-125"

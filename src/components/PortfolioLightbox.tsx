@@ -91,6 +91,9 @@ export const PortfolioLightbox: React.FC<PortfolioLightboxProps> = ({
             src={item.image}
             alt={item.title}
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = '/images/hero_matric_couple.jpg';
+            }}
             className="max-h-[75vh] max-w-full object-contain rounded-sm shadow-2xl border border-white/10 select-none"
           />
         )}

@@ -47,6 +47,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   src={service.image}
                   alt={service.title}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/images/hero_matric_couple.jpg';
+                  }}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />

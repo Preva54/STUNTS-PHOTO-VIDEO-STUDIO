@@ -1,3 +1,10 @@
+import {
+  heroMatricCouple,
+  matricNightFeature,
+  aboutPhotographer,
+  portfolioWeddingCouple,
+} from '../assets/images';
+
 export interface PackageItem {
   id: string;
   number: string;
@@ -137,7 +144,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '01',
     title: 'MATRIC DANCES',
     description: 'Professional matric dance photography and videography designed to capture every important moment.',
-    image: '/src/assets/images/hero_matric_couple_1790271673501.jpg',
+    image: heroMatricCouple,
     tag: 'Pretoria & Gauteng'
   },
   {
@@ -145,7 +152,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '02',
     title: 'WEDDINGS',
     description: 'Capture the emotions, details and unforgettable moments of your wedding day.',
-    image: '/src/assets/images/portfolio_wedding_couple_1790271709672.jpg',
+    image: portfolioWeddingCouple,
     tag: 'Ceremonies & Receptions'
   },
   {
@@ -153,7 +160,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '03',
     title: 'EVENTS',
     description: 'Professional event photography and videography for celebrations and special occasions.',
-    image: '/src/assets/images/matric_night_feature_1790271685576.jpg',
+    image: matricNightFeature,
     tag: 'Parties & Galas'
   },
   {
@@ -161,7 +168,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '04',
     title: 'PORTRAITS',
     description: 'Creative portrait sessions with professional lighting and editing.',
-    image: '/src/assets/images/hero_matric_couple_1790271673501.jpg',
+    image: heroMatricCouple,
     tag: 'Studio & Outdoor'
   },
   {
@@ -169,7 +176,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '05',
     title: 'VIDEOGRAPHY',
     description: 'Cinematic event videos, highlight videos and creative reels.',
-    image: '/src/assets/images/about_photographer_1790271696194.jpg',
+    image: aboutPhotographer,
     tag: '4K Cinema & Drone'
   },
   {
@@ -177,7 +184,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     number: '06',
     title: 'SOCIAL MEDIA CONTENT',
     description: 'Short-form professional content optimized for Instagram, TikTok and other social platforms.',
-    image: '/src/assets/images/matric_night_feature_1790271685576.jpg',
+    image: matricNightFeature,
     tag: 'Trending Reels & Shorts'
   }
 ];
@@ -187,7 +194,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-1',
     title: 'Crimson Elegance Matric Walk',
     category: 'MATRIC',
-    image: '/src/assets/images/hero_matric_couple_1790271673501.jpg',
+    image: heroMatricCouple,
     location: 'Arcadia, Pretoria',
     date: '2026',
     aspectRatio: 'square'
@@ -196,7 +203,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-2',
     title: 'Grand Ballroom Matric Gala Arrival',
     category: 'MATRIC',
-    image: '/src/assets/images/matric_night_feature_1790271685576.jpg',
+    image: matricNightFeature,
     location: 'Menlyn Maine, Pretoria',
     date: '2026',
     aspectRatio: 'wide'
@@ -205,7 +212,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-3',
     title: 'Golden Sunset Wedding Promise',
     category: 'WEDDINGS',
-    image: '/src/assets/images/portfolio_wedding_couple_1790271709672.jpg',
+    image: portfolioWeddingCouple,
     location: 'Cullinan Country Club',
     date: '2026',
     aspectRatio: 'tall'
@@ -214,7 +221,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-4',
     title: 'Behind the Cinema Lens: Studio Master',
     category: 'VIDEOS',
-    image: '/src/assets/images/about_photographer_1790271696194.jpg',
+    image: aboutPhotographer,
     location: 'STUNTS Studio, Madiba St',
     date: '2026',
     aspectRatio: 'wide',
@@ -224,7 +231,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-5',
     title: 'High-Fashion Matric Silhouette',
     category: 'PORTRAITS',
-    image: '/src/assets/images/hero_matric_couple_1790271673501.jpg',
+    image: heroMatricCouple,
     location: 'Union Buildings Garden',
     date: '2026',
     aspectRatio: 'tall'
@@ -233,7 +240,7 @@ export const INITIAL_PORTFOLIO: PortfolioItem[] = [
     id: 'port-6',
     title: 'Celebration Confetti Night Gala',
     category: 'EVENTS',
-    image: '/src/assets/images/matric_night_feature_1790271685576.jpg',
+    image: matricNightFeature,
     location: 'Brooklyn, Pretoria',
     date: '2026',
     aspectRatio: 'square'
