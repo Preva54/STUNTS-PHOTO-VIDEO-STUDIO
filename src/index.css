@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-stunts-red: #ff0000;
+    --color-stunts-red-glow: rgba(255, 0, 0, 0.35);
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Custom font utilities */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Subtle glow effects */
+.glow-red-sm {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 45px rgba(255, 0, 0, 0.45);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Glass backdrop */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 0, 0, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(255, 0, 0, 0.25);
+}
+
+/* Brush stroke SVG masks and overlays */
+.brush-stroke-accent {
+  position: relative;
+}
+
+.brush-stroke-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000 0%, #ff3b3b 60%, transparent 100%);
+  border-radius: 2px;
+}
+
+/* Subtle pulse animation for circular hero ring */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 36s linear infinite;
+}
+
+@keyframes spinReverseSlow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 48s linear infinite;
+}
+
+/* Ken Burns effect */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}

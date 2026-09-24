@@ -1,0 +1,6 @@
+{
+  "name": "STUNTS Photography & Videography",
+  "description": "STUNTS Photography & Videography Services provides professional matric dance, wedding, event, portrait photography and cinematic videography in Pretoria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
